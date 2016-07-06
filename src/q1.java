@@ -17,8 +17,6 @@ public static void main(String []aa )
 	
 	//prob 1
 	dw.findElement(By.cssSelector(".greenbox")).click();
-	//String ans= dw.findElement(By.cssSelector("#answer")).getAttribute("class");
-	//System.out.println(ans);
 
 	//prob2
 	dw.switchTo().frame("main");
@@ -66,12 +64,6 @@ public static void main(String []aa )
 	System.out.println(s);
 	Cookie name = new Cookie("Token", s.substring(7));
 	dw.manage().addCookie(name);
-	/*try {
-		Thread.sleep(10000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}*/
 	dw.findElement(By.linkText("Proceed")).click();
 	try{
 		Thread.sleep(10000);
